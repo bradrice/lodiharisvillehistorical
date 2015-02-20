@@ -1,0 +1,162 @@
+/* main site web styles */
+
+/* common colors used in site */
+$brand_color: #869de5;
+$accent_color: #e4eafe;
+
+.primary {
+	color: $brand_color;
+}
+
+.bright {
+	color: #fff;
+}
+
+body {
+	margin-top: 12px;
+	color: $brand_color;
+}
+
+p, label, td {
+	color: $brand_color;
+}
+
+label {
+	display: block;
+}
+
+.inline-label {
+	display: inline-block;
+}
+
+div#center {
+    height: 650px;
+    overflow: scroll;
+}
+
+div#main-selector {
+	border: 1px solid $brand_color;
+	padding: 0px;
+}
+
+div.hightlightbuttons input.btn {
+	background-color: #b3c3f5;
+	color: #fff;
+}
+
+div.hightlightbuttons input.btn:hover {
+	background-color: #8b9ae4;
+}
+
+div.hightlightbuttons input.btn.active {
+	background-color: #8b9ae4;
+	color: #869de5;
+}
+
+#main-selector div.checkbox {
+	padding: 8px;
+	border-bottom: 1px solid $brand_color;
+	label {
+	font-weight: bold;
+	display: inline-block;
+	}
+}
+
+input[type=checkbox].form-control {
+	border: none;
+	box-shadow: none;
+}
+
+.btn-default {
+color:  #fff;
+background-color: $brand_color;
+border-color: $brand_color;
+}
+
+.btn-inverse {
+	color:  $brand_color;
+	background-color: $accent_color;
+	border-color: $accent_color;
+}
+
+/* header area */
+
+div#logo {
+	border: 1px solid $brand_color;
+	display: inline-block;
+}
+
+div#account_btns {
+	text-align: right;
+}
+
+div.search_area {
+	margin-top: 1em;
+}
+
+div#welcome {
+	margin-top: 2em;
+}
+
+nav.navbar-default {
+	margin-top: 1em;
+}
+
+.nav li>a.last {
+	border: none;
+}
+
+.nav li>a>span:before {
+	display: inline-block;
+	margin-right: 6px;
+}
+
+div.right-sidebar {
+	border-left: 1px solid $brand_color;
+	height: 100%;
+	input[type=button]{
+		margin: 3px;
+	}
+}
+
+.panel-body {
+	color: $brand_color;
+}
+
+.panel-default>.panel-heading {
+	color: #fff;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+#main-selector div.checkbox {
+	margin: 0px;
+}
+
+fieldset#pl {
+	background-color: #e4eafe;
+	legend {
+		float:left;
+	}
+}
+
+footer {
+	margin-top: 1em;
+	background-color: #e4eafe;
+	border-top: 1px solid $brand_color;
+	width: 100%;
+	div.footer {
+		padding: 1em 1em;
+		margin-bottom: 2em;
+	}
+}
+
+@import 'min_768';
+@import 'min_992';
+@import 'min_1200';
