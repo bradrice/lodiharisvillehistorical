@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+Lodi Harrisville Historical society
+{% endblock %}
+{% block addedcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'bower_components/slick.js/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/slick.js/slick/slick-theme.css' %}"/>
+{% endblock %}
+{% block content %}
+
+
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
+    <div class="slider">
+{% for image in images %}
+{#    <p>{{ image }}</p>#}
+<img src="{%  static 'images/home_gallery/' %}{{ image }}" class="img-responsive" />
+{% endfor %}
+    </div>
+    </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="{% static 'bower_components/slick.js/slick/slick.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        $('.slider').slick(
+                {
+        arrows: true
+    }
+        )
+    });
+    </script>
+
+
+{% endblock %}

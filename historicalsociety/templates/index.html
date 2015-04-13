@@ -3,16 +3,93 @@
 {% block title %}
 Lodi Harrisville Historical society
 {% endblock %}
+{% block addedcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'bower_components/slick.js/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/slick.js/slick/slick-theme.css' %}"/>
+{% endblock %}
 {% block content %}
-    <div class="jumbotron">
-   <h1>Lodi Harrisville Historical society</h1>
-    <p>Coming soon.</p>
+    <div class="container-fluid intro">
+    <section>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-6">
+                <h2>A small town and <township></township>, rich in history, set in the heart of Ohio</h2>
+                <p>The county's oldest settlement, Lodi is known for it's railroad bridges, beautiful rhododendron trees, corn festival and Indian statue. Lodi is nestled in Medina County, approximately 50 miles south of Cleveland and 30 miles west of Akron.</p>
+                    <h4>Hours</h4>
+                    <p>Open from 12:00 pm to 2:00 pm every 3rd Tuesday of the month</p>
+                    <h4>Address</h4>
+                    <p>Harrisville Township Hall<br/>
+                    302 Railroad Street<br/>
+                    Lodi, Ohio, 44254</p>
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+    </script>
+        <script type="text/javascript">
+      function initialize() {
+          var myLatlng = new google.maps.LatLng(41.033026, -82.015147)
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 16
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Lodi Harrisville Historical Society"
+});
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+            <div id="map-canvas" style="height: 300px; width: 100%;"></div>
+            </div>
+            <div class="col-sm-6">
+                <img src="{%  static 'images/current/lowatha.jpg' %}" class="img-responsive" alt=""/>
+            </div>
+            </div>
+        </div>
+    </section>
+
     </div>
-    <div class="row">
-    <div class="col-sm-12" style="text-align: center;">
-        <img src="{%  static 'images/business/Hardware-1986.jpg' %}" alt="hardware store" />
+    <div class="container-fluid gallery">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="centered-text">Days gone by.</h3>
+                    <div class="slider">
+                {% for image in images %}
+                    <div class="slide">
+                    <img src="{%  static 'images/home_gallery/' %}{{ image.file_name }}" class="img-responsive"/>
+                    {% if image.caption %}
+                        <div class="caption">{{ image.caption }}</div>
+                    {% endif %}
+                    </div>
+                {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </div>
-    </div>
+
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="{% static 'bower_components/slick.js/slick/slick.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        $('.slider').slick(
+        {
+            arrows: true,
+            dots: true,
+        }
+        );
+    })
+    </script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
 
 
 {% endblock %}

@@ -4,17 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite|Share:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <link href='http://fonts.googleapis.com/css?family=Puritan:400,700,400italic,700italic|Sorts+Mill+Goudy:400,400italic' rel='stylesheet' type='text/css'>
+    {%  block addedcss %}{% endblock %}
+    <link rel="stylesheet" href="{%  static 'css/style.css' %}"/>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            {% block content %}{% endblock %}
+ <header class="navbar navbar-head">
+    <div class="site_head">
+        <div class="container">
+            <h1 class="site_title">Lodi Harrisville Historical society</h1>
+
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/web">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li {% if 'history' in request.build_absolute_uri %}class="active"{% endif %}><a href="/web/history">Our History <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Pictures</a></li>
+
+              </ul>
+{#              <form class="navbar-form navbar-left" role="search">#}
+{#                <div class="form-group">#}
+{#                  <input type="text" class="form-control" placeholder="Search">#}
+{#                </div>#}
+{#                <button type="submit" class="btn btn-default">Submit</button>#}
+{#              </form>#}
+{#              <ul class="nav navbar-nav navbar-right">#}
+{#                <li><a href="#">Link</a></li>#}
+{#                #}
+{#              </ul>#}
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+            </div>
+    </header>
+    {% block content %}{% endblock %}
+</div>
+<footer>
+    <div class="footer">
+        <div class="container">
+            <h3>Mission</h3>
+             <p>The goal of the Lodi Harrisville Historical Society Inc. is to locate, collect, preserve and interpret the local area history with accuracy and integrity.  In doing so, the Lodi Harrisville region of Ohio will have an identifiable position in american’s past, present and future.</p>
         </div>
     </div>
-</div>
+</footer>
 {%  block scripts %}{%  endblock %}
 </body>
 </html>

@@ -1,161 +1,120 @@
 /* main site web styles */
 
 /* common colors used in site */
-$brand_color: #869de5;
-$accent_color: #e4eafe;
+/* LESS - http://lesscss.org style sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=50v0u0k9Shw69zO7Qp6hBcWG9b8 */
 
-.primary {
-	color: $brand_color;
-}
+/* Feel free to copy&paste color codes to your application */
 
-.bright {
-	color: #fff;
-}
+
+/* MIXINS */
+
+/* As hex codes */
+
+$bright-tan: #FFE5CE;
+$van-dyke: #67492E;
+$bold-siena: #592900;
+
+$olive: #67542E;
+$siena: #593C00;
+$light-olive: #b5c393;
+
+$light-pink: #FFCFCE;
+$antique-pink: #C89897;
+$blush: #67302E;
+$dark-red: #590200;
 
 body {
-	margin-top: 12px;
-	color: $brand_color;
+  font-family: "Sorts Mill Goudy", "Times", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 160%;
 }
 
-p, label, td {
-	color: $brand_color;
+li, p, td, dd, dt {
+  font-size: 120%;
 }
 
-label {
-	display: block;
+h4 {
+  font-size: 140%;
+  font-weight: 700;
+  font-family: 'Puritan', sans-serif;
+  color: $dark-red;
 }
 
-.inline-label {
-	display: inline-block;
+header {
+  background-color: $dark-red;
 }
 
-div#center {
-    height: 650px;
-    overflow: scroll;
+header.navbar-head {
+  margin-bottom: 0px;
 }
 
-div#main-selector {
-	border: 1px solid $brand_color;
-	padding: 0px;
+h1.site_title {
+  font-family: 'Puritan', sans-serif;
+  color: #fff;
 }
 
-div.hightlightbuttons input.btn {
-	background-color: #b3c3f5;
-	color: #fff;
+div.slider {
+  width: auto;
+  max-width: 900px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-div.hightlightbuttons input.btn:hover {
-	background-color: #8b9ae4;
+.slick-slide {
+  position: relative;
 }
 
-div.hightlightbuttons input.btn.active {
-	background-color: #8b9ae4;
-	color: #869de5;
+.caption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 15px;
+  min-height: 38px;
+  background-color: rgba($siena, 0.85);
+  color: #ffefce;
+//  z-index: 50;
 }
 
-#main-selector div.checkbox {
-	padding: 8px;
-	border-bottom: 1px solid $brand_color;
-	label {
-	font-weight: bold;
-	display: inline-block;
-	}
+.slick-prev:before, .slick-next:before {
+    color: $dark-red;
 }
 
-input[type=checkbox].form-control {
-	border: none;
-	box-shadow: none;
-}
-
-.btn-default {
-color:  #fff;
-background-color: $brand_color;
-border-color: $brand_color;
-}
-
-.btn-inverse {
-	color:  $brand_color;
-	background-color: $accent_color;
-	border-color: $accent_color;
-}
-
-/* header area */
-
-div#logo {
-	border: 1px solid $brand_color;
-	display: inline-block;
-}
-
-div#account_btns {
-	text-align: right;
-}
-
-div.search_area {
-	margin-top: 1em;
-}
-
-div#welcome {
-	margin-top: 2em;
-}
-
-nav.navbar-default {
-	margin-top: 1em;
-}
-
-.nav li>a.last {
-	border: none;
-}
-
-.nav li>a>span:before {
-	display: inline-block;
-	margin-right: 6px;
-}
-
-div.right-sidebar {
-	border-left: 1px solid $brand_color;
-	height: 100%;
-	input[type=button]{
-		margin: 3px;
-	}
-}
-
-.panel-body {
-	color: $brand_color;
-}
-
-.panel-default>.panel-heading {
-	color: #fff;
-}
-
-.right {
-	float: right;
-}
-
-.left {
-	float: left;
-}
-
-#main-selector div.checkbox {
-	margin: 0px;
-}
-
-fieldset#pl {
-	background-color: #e4eafe;
-	legend {
-		float:left;
-	}
+#main-body {
+  background-color: #fff;
 }
 
 footer {
-	margin-top: 1em;
-	background-color: #e4eafe;
-	border-top: 1px solid $brand_color;
-	width: 100%;
-	div.footer {
-		padding: 1em 1em;
-		margin-bottom: 2em;
-	}
+  background-color: $light-olive;
+  padding: 1em;
 }
+
+div.gallery {
+  background-color: $bright-tan;
+}
+
+.center-blocks {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+section {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+dt {
+  font-weight: bold;
+  font-family: 'Puritan', sans-serif;
+  color: $van-dyke;
+}
+
 
 @import 'min_768';
 @import 'min_992';

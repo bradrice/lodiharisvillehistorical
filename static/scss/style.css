@@ -1,0 +1,100 @@
+/* main site web styles */
+/* common colors used in site */
+/* LESS - http://lesscss.org style sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=50v0u0k9Shw69zO7Qp6hBcWG9b8 */
+/* Feel free to copy&paste color codes to your application */
+/* MIXINS */
+/* As hex codes */
+body {
+  font-family: "Sorts Mill Goudy", "Times", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 160%; }
+
+li, p, td, dd, dt {
+  font-size: 120%; }
+
+h4 {
+  font-size: 140%;
+  font-weight: 700;
+  font-family: 'Puritan', sans-serif;
+  color: #590200; }
+
+header {
+  background-color: #590200; }
+
+header.navbar-head {
+  margin-bottom: 0px; }
+
+h1.site_title {
+  font-family: 'Puritan', sans-serif;
+  color: #fff; }
+
+div.slider {
+  width: auto;
+  max-width: 900px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slick-slide {
+  position: relative; }
+
+.caption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 15px;
+  min-height: 38px;
+  background-color: rgba(89, 60, 0, 0.85);
+  color: #ffefce; }
+
+.slick-prev:before, .slick-next:before {
+  color: #590200; }
+
+#main-body {
+  background-color: #fff; }
+
+footer {
+  background-color: #b5c393;
+  padding: 1em; }
+
+div.gallery {
+  background-color: #FFE5CE; }
+
+.center-blocks {
+  margin-left: auto;
+  margin-right: auto; }
+
+.centered-text {
+  text-align: center; }
+
+section {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
+dt {
+  font-weight: bold;
+  font-family: 'Puritan', sans-serif;
+  color: #67492E; }
+
+@media (min-width: 768px) {
+  .nav li > a {
+    font-size: .9em;
+    border-right: 1px solid #fff;
+    padding-left: 6px;
+    padding-right: 6px; } }
+@media (min-width: 992px) {
+  .nav li > a {
+    font-size: 1em;
+    border-right: 1px solid #fff;
+    padding-left: 10px;
+    padding-right: 10px; } }
+@media (min-width: 1200px) {
+  .nav li > a {
+    font-size: 1.25em;
+    border-right: 1px solid #fff;
+    padding-left: 15px;
+    padding-right: 15px; } }
+
+/*# sourceMappingURL=style.css.map */

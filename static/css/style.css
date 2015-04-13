@@ -1,0 +1,141 @@
+/* main site web styles */
+/* common colors used in site */
+/* LESS - http://lesscss.org style sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=50v0u0k9Shw69zO7Qp6hBcWG9b8 */
+/* Feel free to copy&paste color codes to your application */
+/* MIXINS */
+/* As hex codes */
+/* line 28, ../scss/style.scss */
+body {
+  font-family: "Sorts Mill Goudy", "Times", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+/* line 34, ../scss/style.scss */
+li, p, td, dd, dt {
+  font-size: 120%;
+}
+
+/* line 38, ../scss/style.scss */
+h4 {
+  font-size: 140%;
+  font-weight: 7;
+  font-family: 'Puritan', sans-serif;
+  color: #590200;
+}
+
+/* line 45, ../scss/style.scss */
+header {
+  background-color: #590200;
+}
+
+/* line 49, ../scss/style.scss */
+header.navbar-head {
+  margin-bottom: 0px;
+}
+
+/* line 53, ../scss/style.scss */
+h1.site_title {
+  font-family: 'Puritan', sans-serif;
+  color: #fff;
+}
+
+/* line 58, ../scss/style.scss */
+div.slider {
+  width: auto;
+  max-width: 900px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 66, ../scss/style.scss */
+.slick-slide {
+  position: relative;
+}
+
+/* line 70, ../scss/style.scss */
+.caption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 15px;
+  min-height: 38px;
+  background-color: rgba(89, 60, 0, 0.85);
+  color: #ffefce;
+}
+
+/* line 81, ../scss/style.scss */
+.slick-prev:before, .slick-next:before {
+  color: #590200;
+}
+
+/* line 85, ../scss/style.scss */
+#main-body {
+  background-color: #fff;
+}
+
+/* line 89, ../scss/style.scss */
+footer {
+  background-color: #b5c393;
+  padding: 1em;
+}
+
+/* line 94, ../scss/style.scss */
+div.gallery {
+  background-color: #FFE5CE;
+}
+
+/* line 98, ../scss/style.scss */
+.center-blocks {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 103, ../scss/style.scss */
+.centered-text {
+  text-align: center;
+}
+
+/* line 107, ../scss/style.scss */
+section {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 112, ../scss/style.scss */
+dt {
+  font-weight: bold;
+  font-family: 'Puritan', sans-serif;
+  color: #67492E;
+}
+
+@media (min-width: 768px) {
+  /* line 3, ../scss/_min_768.scss */
+  .nav li > a {
+    font-size: .9em;
+    border-right: 1px solid #fff;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 3, ../scss/_min_992.scss */
+  .nav li > a {
+    font-size: 1em;
+    border-right: 1px solid #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 3, ../scss/_min_1200.scss */
+  .nav li > a {
+    font-size: 1.25em;
+    border-right: 1px solid #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
