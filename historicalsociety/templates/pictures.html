@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+Lodi Harrisville Historical society history
+{% endblock %}
+{% block addedcss %}
+
+{% endblock %}
+{% block content %}
+    <section>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Pictures</h1>
+        <h2>Historical and contemporary</h2>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h4>Businesses</h4>
+                <a href="/web/pictures/business"><img src="{%  static 'images/business/Hardware-1986_sm.jpg' %}" alt="Scotts" class="img-responsive" /></a>
+                <p class="pcaption">See how business has changed in Lodi from it's historical past.</p>
+            </div>
+            <div class="col-sm-3">
+                <h4>Woodlawn Cemetery</h4>
+                <a href="/web/pictures/cemetery"><img src="{%  static 'images/cemetery/rhodo7_sm.jpg' %}" alt="cemetery" class="img-responsive" /></a>
+                    <p class="pcaption">Woodlawn Cemetery known for it's lush Rhododendruns is a site to see around Memorial Day</p>
+            </div>
+            <div class="col-sm-3">
+                <h4>Railroads</h4>
+                <a href="/web/pictures/railroad"><img src="{%  static 'images/railroad/lodihistory-024_sm.jpg' %}" alt="railroad" class="img-responsive" /></a>
+                    <p class="pcaption">Lodi was and is a railroad town. Rich in history, here are the images.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+{% endblock %}
+{% block scripts %}
+
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+
+{% endblock %}

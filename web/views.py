@@ -30,8 +30,37 @@ def gallery(request):
     img_list =os.listdir(directorypath)
     return render_to_response('gallery.html', {'images': img_list})
 
+
 class History(TemplateView):
     template_name = 'history.html'
 
     def dispatch(self, *args, **kwargs):
         return super(History, self).dispatch(*args, **kwargs)
+
+
+class Pictures(TemplateView):
+    template_name = 'pictures.html'
+
+    def dispatch(self, *args, **kwargs):
+        return super(Pictures, self).dispatch(*args, **kwargs)
+
+
+class Business(TemplateView):
+    template_name = 'business.html'
+
+    def dispatch(self, *args, **kwargs):
+        return super(Business, self).dispatch(*args, **kwargs)
+
+
+class Cemetery(TemplateView):
+    template_name = 'cemetery.html'
+
+    def dispatch(self, *args, **kwargs):
+        return super(Cemetery, self).dispatch(*args, **kwargs)
+
+
+class Railroad(TemplateView):
+    template_name = 'railroad.html'
+
+    def dispatch(self, *args, **kwargs):
+        return super(Railroad, self).dispatch(*args, **kwargs)

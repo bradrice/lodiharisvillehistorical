@@ -78,6 +78,11 @@ dt {
   font-family: 'Puritan', sans-serif;
   color: #67492E; }
 
+.cutline {
+  font-family: 'Puritan', sans-serif;
+  margin-top: 1em;
+  text-align: center; }
+
 @media (min-width: 768px) {
   .nav li > a {
     font-size: .9em;

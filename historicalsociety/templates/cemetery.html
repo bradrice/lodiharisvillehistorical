@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+Lodi Harrisville Historical society history
+{% endblock %}
+{% block addedcss %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/lightbox/css/lightbox.css' %}"/>
+{% endblock %}
+{% block content %}
+    <section>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Woodlawn Cemetery</h1>
+        <h2>Pictures taken near Memorial Day</h2>
+            <p>Click for a larger view.</p>
+        </div>
+    </div>
+        <div class="pic-rows">
+           <div class="row">
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/rhodo1.jpg' %}" data-lightbox="img-cem" data-title="Rhododendrons">
+                    <img src="{%  static 'images/cemetery/rhodo1_sm.jpg' %}" alt="cemetery flowers" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/rhodo2.jpg' %}" data-lightbox="img-cem" data-title="Rhododendrons">
+                    <img src="{%  static 'images/cemetery/rhodo2_sm.jpg' %}" alt="cemetery flowers" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/rhodo3.jpg' %}" data-lightbox="img-cem" data-title="Rhododendrons">
+                    <img src="{%  static 'images/cemetery/rhodo3_sm.jpg' %}" alt="cemetery flowers" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/rhodo4.jpg' %}" data-lightbox="img-cem" data-title="Rhododendrons">
+                    <img src="{%  static 'images/cemetery/rhodo4_sm.jpg' %}" alt="cemetery flowers" class="img-responsive" />
+                </a>
+            </div>
+               </div>
+
+               <div class="row">
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/rhodo5.jpg' %}" data-lightbox="img-cem" data-title="Rhododendrons">
+                    <img src="{%  static 'images/cemetery/rhodo5_sm.jpg' %}" alt="cemetery flowers" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/rhodo6.jpg' %}" data-lightbox="img-cem" data-title="Rhododendrons">
+                    <img src="{%  static 'images/cemetery/rhodo6_sm.jpg' %}" alt="cemetery flowers" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/flags.jpg' %}" data-lightbox="img-cem" data-title="Flags for Memorial Day celebration">
+                    <img src="{%  static 'images/cemetery/flags_sm.jpg' %}" alt="flags at Memorial Day celebration" class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% static 'images/cemetery/flags2.jpg' %}" data-lightbox="img-cem" data-title="Flags for Memorial Day celebration">
+                    <img src="{%  static 'images/cemetery/flags2_sm.jpg' %}" alt="flags at Memorial Day celebration" class="img-responsive" />
+                </a>
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="{% static 'images/cemetery/headstones.jpg' %}" data-lightbox="img-cem" data-title="Headstones and Mausoleum">
+                    <img src="{%  static 'images/cemetery/headstones_sm.jpg' %}" alt="Headstones" class="img-responsive" />
+                </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        </div>
+    </section>
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'bower_components/lightbox/js/lightbox.min.js' %}"></script>
+{% endblock %}
