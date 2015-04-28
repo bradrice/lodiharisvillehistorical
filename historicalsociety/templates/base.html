@@ -33,8 +33,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li {% if 'history' in request.build_absolute_uri %}class="active"{% endif %}><a href="/web/history">Our History <span class="sr-only">(current)</span></a></li>
-                    <li><a href="/web/pictures">Pictures</a></li>
+                    <li {% if 'history' in request.build_absolute_uri %}class="active"{% endif %}><a href="/web/history">Our History <span class="sr-only">History</span></a></li>
+                      <li {% if 'timeline' in request.build_absolute_uri %}class="active"{% endif %}><a href="/web/timeline">Timeline <span class="sr-only">Timeline</span></a></li>
+                    <li {% if 'pictures' in request.build_absolute_uri %}class="active"{% endif %}><a href="/web/pictures">Pictures</a></li>
 
                   </ul>
     {#              <form class="navbar-form navbar-left" role="search">#}

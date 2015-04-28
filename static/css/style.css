@@ -79,6 +79,12 @@ h1.site_title {
 }
 
 /* line 89, ../scss/style.scss */
+div.right-sidebar {
+  background-color: #b5c393;
+  padding: 1em 1em;
+}
+
+/* line 94, ../scss/style.scss */
 div.slider {
   width: auto;
   max-width: 900px;
@@ -87,12 +93,12 @@ div.slider {
   margin-right: auto;
 }
 
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .slick-slide {
   position: relative;
 }
 
-/* line 101, ../scss/style.scss */
+/* line 106, ../scss/style.scss */
 .caption {
   position: absolute;
   bottom: 0px;
@@ -103,59 +109,59 @@ div.slider {
   color: #ffefce;
 }
 
-/* line 112, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
 .slick-prev:before, .slick-next:before {
   color: #590200;
 }
 
-/* line 116, ../scss/style.scss */
+/* line 121, ../scss/style.scss */
 #main-body {
   background-color: #fff;
 }
 
-/* line 120, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 footer {
   background-color: #b5c393;
   padding: 1em;
 }
 
-/* line 125, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 div.gallery {
   background-color: #FFE5CE;
 }
 
-/* line 129, ../scss/style.scss */
+/* line 134, ../scss/style.scss */
 .center-blocks {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 134, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 .centered-text {
   text-align: center;
 }
 
-/* line 138, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 section {
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-/* line 143, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 dt {
   font-weight: bold;
   font-family: 'Puritan', sans-serif;
   color: #67492E;
 }
 
-/* line 149, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 .cutline {
   font-family: 'Puritan', sans-serif;
   margin-top: 1em;
   text-align: center;
 }
 
-/* line 155, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 .pcaption {
   width: 100%;
   padding: 15px;
@@ -164,13 +170,13 @@ dt {
   color: #ffefce;
 }
 
-/* line 164, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 .well img {
   display: block;
   margin: auto;
 }
 
-/* line 168, ../scss/style.scss */
+/* line 173, ../scss/style.scss */
 div.pic-rows .row {
   padding: 1em 0;
 }
