@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+Lodi Harrisville Historical society history
+{% endblock %}
+{% block addedcss %}
+
+{% endblock %}
+{% block content %}
+    <section>
+    <div class="container">
+    <div class="row">
+        <h1 class="col-sm-12">Membership</h1>
+<div class="col-sm-8">
+    <h4>Membership</h4>
+    <p>We are always interested in members. Please join us by downloading the membership form. Fill it out and mail it to </p><p>Lodi/Harrisville Historical Society<br />
+        P.O. Box 172<br />
+        Lodi, OH  44254
+    </p>
+    <p><a class="btn btn-default" href="{% static 'docs/LHHS_Membership_Form.pdf' %}">Download membership form</a></p>
+
+    </div>
+    </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
+{% block scripts %}
+
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+
+{% endblock %}

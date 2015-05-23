@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+Lodi Harrisville Historical society history
+{% endblock %}
+{% block addedcss %}
+
+{% endblock %}
+{% block content %}
+    <section>
+    <div class="container">
+    <div class="row">
+        <h1 class="col-sm-12">Test page</h1>
+<div class="col-sm-8">
+    <h4>Test</h4>
+    {% with request.build_absolute_uri as path %}
+    <p>Path: {{ path}}</p>
+    {% endwith %}
+    </div>
+    </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
+{% block scripts %}
+
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+
+{% endblock %}
