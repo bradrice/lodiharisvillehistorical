@@ -38,6 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'web',
     'historicalsociety',
+    'ckeditor',
+    'mptt',
+    'tagging',
+    'zinnia',
+    'zinnia_ckeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -92,3 +97,5 @@ MEDIA_ROOT = '/Users/bradrice/Sites/lodihistory/historicalsociety/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR), "static")
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
