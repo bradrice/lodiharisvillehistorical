@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+.iws
+workspace.xml
+tasks.xml
+*.pyc
+leadershipmedinacounty.iml
+misc.xml
+settings.py
+.sass-cache/
+.idea/

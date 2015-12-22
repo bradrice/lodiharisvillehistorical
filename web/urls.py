@@ -12,6 +12,6 @@ url(r'^pictures$', Pictures.as_view(), name='pictures'),
 url(r'^pictures/business', TemplateView.as_view(template_name='business.html'), name='business'),
 url(r'^pictures/cemetery', TemplateView.as_view(template_name='cemetery.html'), name='cemetery'),
 url(r'^pictures/railroad', TemplateView.as_view(template_name='railroad.html'), name='railroad'),
-url(r'^test$', TemplateView.as_view(template_name='test.html'), name='test'),
+url(r'^/test$', TemplateView.as_view(template_name='test.html'), name='test'),
 url(r'^member$', TemplateView.as_view(template_name='member.html'), name='test'),
 )

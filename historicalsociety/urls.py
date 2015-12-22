@@ -3,6 +3,7 @@ from django.contrib import admin
 import os
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import RedirectView
+from django.core.urlresolvers import reverse
 
 urlpatterns = patterns('',
     # Examples:
@@ -10,8 +11,11 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^comments/', include('django_comments.urls')),
+    url(r'^blog/', include('zinnia.urls', namespace='zinnia')),
     url(r'^web/', include('web.urls', namespace='web')),
     url(r'^$', RedirectView.as_view(url='web/', permanent=False)),
+    url(r'^ckeditor/', include('ckeditor.urls')),
         )
 
 

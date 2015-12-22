@@ -26,6 +26,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
+
 
 # Application definition
 
@@ -36,8 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'web',
     'historicalsociety',
+    'django_comments',
     'ckeditor',
     'mptt',
     'tagging',
@@ -59,7 +63,7 @@ ROOT_URLCONF = 'historicalsociety.urls'
 
 WSGI_APPLICATION = 'historicalsociety.wsgi.application'
 
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'historicalsociety/templates')]
+# TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 
 # Database
@@ -85,17 +89,72 @@ USE_L10N = True
 
 USE_TZ = True
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+            # 'loaders': ('app_namespace.Loader',
+            #             'django.template.loaders.app_directories.Loader',
+            #             )
+        },
+    },
+]
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
-  'django.core.context_processors.request',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'zinnia.context_processors.version',  # Optional
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+    'app_namespace.Loader',
 )
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 MEDIA_ROOT = '/Users/bradrice/Sites/lodihistory/historicalsociety/static/'
 
+STATIC_ROOT = '/Users/bradrice/Sites/lodihistory/static/'
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR), "static")
 
+CKEDITOR_JQUERY_URL = '/static/js/jquery-2.1.1.min.js'
+
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+    },
+    'zinnia-content': {
+        'toolbar_Zinnia': [
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+            ['Undo', 'Redo'],
+            ['Scayt'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
+            ['Source'],
+            ['Maximize'],
+            '/',
+            ['Bold', 'Italic', 'Underline', 'Strike',
+             'Subscript', 'Superscript', '-', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList', '-',
+             'Outdent', 'Indent', '-', 'Blockquote'],
+            ['Styles', 'Format'], ['CodeSnippet'],
+        ],
+        'toolbar': 'Zinnia',
+    },
+}
