@@ -124,9 +124,11 @@ TEMPLATE_LOADERS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-MEDIA_ROOT = '/Users/bradrice/Sites/lodihistory/historicalsociety/static/'
+MEDIA_ROOT = '/Users/bradrice/Sites/lodihistory2/historicalsociety/static/media/'
 
-STATIC_ROOT = '/Users/bradrice/Sites/lodihistory/static/'
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = '/Users/bradrice/Sites/lodihistory2/static/'
 
 STATIC_URL = '/static/'
 
